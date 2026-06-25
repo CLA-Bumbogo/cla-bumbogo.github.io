@@ -9,7 +9,7 @@
        * Never delete the < > tags themselves.
        * To add a sermon or gallery album, copy a whole existing block, paste it
          right below, then change its words/link.
-     <!-- ============================================================================= --> 
+     ============================================================================= -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -21,10 +21,44 @@
   <!-- EDIT: This short description appears in Google search results. -->
   <meta name="description" content="Christian Life Assembly (CLA) Bumbogo branch — watch sermons, browse our photo gallery, and read weekly announcements." />
 
+  <!-- ============================ SITE ICONS ============================
+       Favicon is generated from the church logo's cross emblem.
+       Files live in  assets/icons/  and  assets/images/ . -->
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" />
+  <link rel="apple-touch-icon" href="assets/images/cla-emblem.png" />
+
+  <!-- ============================ FONTS ============================
+       Premium Google Fonts chosen to echo the logo's elegant serif lettering:
+         * Playfair Display  -> headings (classic, high-end serif)
+         * Inter             -> body text (clean, highly legible sans-serif)
+         * Montserrat        -> nav / labels (modern, wide, uppercase-friendly) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+
+  <!-- =========================================================================
+       ENTRANCE PRELOADER  (premium splash animation shown on first load)
+       -------------------------------------------------------------------------
+       Plays once when the page opens, then fades away to reveal the homepage.
+       The small script at the bottom of this file removes it automatically.
+       Media team: you normally never need to touch this block.
+       ========================================================================= -->
+  <div class="preloader" id="preloader" role="status" aria-label="Loading">
+    <div class="preloader-inner">
+      <!-- The church emblem scales/fades in -->
+      <img class="preloader-logo" src="assets/images/cla-emblem.png" alt="Christian Life Assembly emblem" />
+      <!-- Wordmark fades in part by part -->
+      <p class="preloader-title">Christian Life Assembly</p>
+      <p class="preloader-subtitle">Bumbogo Branch</p>
+      <!-- Thin animated progress line -->
+      <span class="preloader-bar" aria-hidden="true"></span>
+    </div>
+  </div>
 
   <!-- =========================================================================
        HEADER / NAVIGATION  (fixed at the top — logo left, menu right)
@@ -32,10 +66,10 @@
   <header class="site-header">
     <div class="container">
 
-      <!-- Brand lockup. The little square is the CLA cross drawn with CSS.
+      <!-- Brand lockup. Uses the OFFICIAL church logo emblem from assets/images/.
            EDIT: change the two text lines below if needed. -->
       <a class="brand" href="#home" aria-label="CLA Bumbogo home">
-        <span class="brand-mark" aria-hidden="true"></span>
+        <img class="brand-mark" src="assets/images/cla-emblem.png" alt="CLA Bumbogo logo" />
         <span class="brand-text">
           <strong>Christian Life Assembly</strong>
           <span>Bumbogo Branch</span>
@@ -375,6 +409,48 @@
           toggle.setAttribute('aria-expanded', 'false');
         }
       });
+    })();
+  </script>
+
+  <!-- =========================================================================
+       PRELOADER SCRIPT: hide the splash screen once everything has loaded.
+       - Waits for the full page load (images/fonts) AND a minimum on-screen
+         time so the animation is always seen, then fades the overlay out.
+       - To change how long the splash stays, edit MIN_VISIBLE_MS below.
+       ========================================================================= -->
+  <script>
+    (function () {
+      var preloader = document.getElementById('preloader');
+      if (!preloader) return;
+
+      var MIN_VISIBLE_MS = 5200;        // EDIT: how long the splash shows (ms)
+      var start = Date.now();
+
+      function hidePreloader() {
+        var elapsed = Date.now() - start;
+        var wait = Math.max(0, MIN_VISIBLE_MS - elapsed);
+        setTimeout(function () {
+          preloader.classList.add('preloader--hidden');
+          document.body.classList.remove('is-loading');
+          // Remove from the DOM after the slide/fade transition completes.
+          setTimeout(function () {
+            if (preloader && preloader.parentNode) {
+              preloader.parentNode.removeChild(preloader);
+            }
+          }, 900);
+        }, wait);
+      }
+
+      // Lock scrolling while the splash is up.
+      document.body.classList.add('is-loading');
+
+      if (document.readyState === 'complete') {
+        hidePreloader();
+      } else {
+        window.addEventListener('load', hidePreloader);
+        // Safety net: never trap the user if 'load' is slow to fire.
+        setTimeout(hidePreloader, 8000);
+      }
     })();
   </script>
 
