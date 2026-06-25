@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<!-- =============================================================================
+     CLA BUMBOGO — HOMEPAGE
+     -----------------------------------------------------------------------------
+     HOW TO EDIT THIS PAGE (for the media team — no coding needed):
+       * Look for green "<!-- EDIT: ... -->" notes. They tell you exactly what to
+         change and how.
+       * Only change the WORDS between the tags (e.g. between <h3> and </h3>).
+       * Never delete the < > tags themselves.
+       * To add a sermon or gallery album, copy a whole existing block, paste it
+         right below, then change its words/link.
+     ============================================================================= -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- EDIT: This is the title shown on the browser tab and in Google search. -->
+  <title>Christian Life Assembly — Bumbogo</title>
+
+  <!-- EDIT: This short description appears in Google search results. -->
+  <meta name="description" content="Christian Life Assembly (CLA) Bumbogo branch — watch sermons, browse our photo gallery, and read weekly announcements." />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- =========================================================================
+       HEADER / NAVIGATION  (fixed at the top — logo left, menu right)
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container">
+
+      <!-- Brand lockup. The little square is the CLA cross drawn with CSS.
+           EDIT: change the two text lines below if needed. -->
+      <a class="brand" href="#home" aria-label="CLA Bumbogo home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <strong>Christian Life Assembly</strong>
+          <span>Bumbogo Branch</span>
+        </span>
+      </a>
+
+      <!-- Hamburger button (only shows on phones) -->
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+
+      <!-- Main menu. EDIT: to rename a menu item, change the words only.
+           Each link's "#name" must match a section id further down the page. -->
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#sermons">Watch Sermons</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#announcements">Announcements</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =======================================================================
+         HERO  (big welcome banner)
+         ======================================================================= -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <!-- EDIT: small label above the big title -->
+        <p class="eyebrow">Welcome to CLA Bumbogo</p>
+
+        <!-- EDIT: the BIG headline -->
+        <h1>Christ Centered</h1>
+
+        <!-- EDIT: the welcome sentence under the headline -->
+        <p>A family of faith in Bumbogo — gathering to worship, grow, and serve.
+           Catch up on sermons, relive our moments, and stay up to date.</p>
+
+        <div class="hero-actions">
+          <!-- EDIT: these two buttons jump to sections on this page -->
+          <a class="btn" href="#sermons">Watch Latest Sermon</a>
+          <a class="btn btn-outline" href="#announcements">This Week at Church</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         ABOUT
+         ======================================================================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-grid">
+
+          <div class="about-text">
+            <!-- EDIT: section heading and paragraphs -->
+            <h2 class="section-title" style="text-align:left;">About Our Branch</h2>
+            <p>Christian Life Assembly — Bumbogo is a local branch of the wider CLA
+               family in Rwanda. We are a Christ-centered community committed to
+               worship, discipleship, and serving our neighbourhood.</p>
+            <p>Whether you are visiting for the first time or have been part of the
+               family for years, there is a place for you here. Join us on Sunday,
+               or explore our sermons and photo galleries any time.</p>
+            <a class="btn" href="#sermons">Explore Sermons</a>
+          </div>
+
+          <!-- Quick facts / service times card -->
+          <div class="about-card">
+            <h3>At a Glance</h3>
+            <ul>
+              <!-- EDIT: each line is "Label" then "Value" -->
+              <li><span>Sunday Service</span> <span>9:00 AM</span></li>
+              <li><span>Midweek Fellowship</span> <span>Wed 6:00 PM</span></li>
+              <li><span>Location</span> <span>Bumbogo, Kigali</span></li>
+              <li><span>Enquiries</span> <span>+250 792 690 449</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         WATCH SERMONS  (embedded YouTube videos / Spotify audio)
+         -----------------------------------------------------------------------
+         HOW TO ADD A REAL SERMON:
+           1. On YouTube, click "Share" -> "Embed", and copy the link inside
+              src="..."  (it looks like https://www.youtube.com/embed/XXXXXXXX).
+              For Spotify, use "Share" -> "Copy embed code".
+           2. In a card below, DELETE the <div class="embed-placeholder">...</div>
+              block and instead paste an iframe like:
+                <iframe class="" src="PASTE_EMBED_LINK_HERE"
+                        title="Sermon title" allowfullscreen></iframe>
+              (Place it directly inside <div class="embed-frame"> ... </div>.)
+           3. Update the title and description text under the video.
+         ======================================================================= -->
+    <section class="section" id="sermons">
+      <div class="container">
+        <h2 class="section-title">Watch &amp; Listen to Sermons</h2>
+        <p class="section-subtitle">Missed a Sunday? Catch up on past messages here.
+           Videos are hosted free on YouTube; audio on Spotify.</p>
+
+        <div class="sermon-grid">
+
+          <!-- ----- SERMON CARD 1 ----- -->
+          <article class="sermon-card">
+            <div class="embed-frame">
+              <!-- EDIT: replace this placeholder with a real <iframe> (see notes above). -->
+              <div class="embed-placeholder">
+                <span class="play-icon">&#9658;</span>
+                <span>Sermon video coming soon</span>
+                <small>Paste a YouTube embed link here</small>
+              </div>
+            </div>
+            <div class="card-body">
+              <!-- EDIT: tag, title and short description -->
+              <span class="card-tag">Sunday Message</span>
+              <h3>Walking in Faith</h3>
+              <p>Pastor's message on trusting God through every season.</p>
+            </div>
+          </article>
+
+          <!-- ----- SERMON CARD 2 ----- -->
+          <article class="sermon-card">
+            <div class="embed-frame">
+              <!-- EDIT: replace this placeholder with a real <iframe> (see notes above). -->
+              <div class="embed-placeholder">
+                <span class="play-icon">&#9658;</span>
+                <span>Sermon video coming soon</span>
+                <small>Paste a YouTube embed link here</small>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Sunday Message</span>
+              <h3>The Power of Community</h3>
+              <p>How we grow stronger together as one church family.</p>
+            </div>
+          </article>
+
+          <!-- ----- SERMON CARD 3 (Audio / Spotify example) ----- -->
+          <article class="sermon-card">
+            <div class="embed-frame">
+              <!-- EDIT: replace with a Spotify embed for audio-only messages. -->
+              <div class="embed-placeholder">
+                <span class="play-icon">&#9835;</span>
+                <span>Audio message coming soon</span>
+                <small>Paste a Spotify embed link here</small>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Audio • Spotify</span>
+              <h3>Hope That Endures</h3>
+              <p>Listen on the go — full audio of last week's teaching.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         MEDIA GALLERY  (links out to Google Photos / Google Drive albums)
+         -----------------------------------------------------------------------
+         HOW TO ADD A GALLERY:
+           1. In Google Photos/Drive, create a shared album and copy its share link.
+           2. In a card below, paste that link into  href="PASTE_ALBUM_LINK_HERE".
+           3. Update the album name and date text.
+         No photos are stored on the website — we only link to the album.
+         ======================================================================= -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <h2 class="section-title">Media Gallery</h2>
+        <p class="section-subtitle">Relive our Sundays and special events.
+           Click an album to view all photos on Google Photos.</p>
+
+        <div class="gallery-grid">
+
+          <!-- ----- GALLERY CARD 1 ----- -->
+          <!-- EDIT: paste the album link in href. target/rel open it safely in a new tab. -->
+          <a class="gallery-card" href="https://photos.google.com" target="_blank" rel="noopener">
+            <div class="gallery-caption">
+              <!-- EDIT: album name and date -->
+              <h3>Sunday Worship</h3>
+              <span>This Week's Service</span>
+            </div>
+          </a>
+
+          <!-- ----- GALLERY CARD 2 ----- -->
+          <a class="gallery-card" href="https://photos.google.com" target="_blank" rel="noopener">
+            <div class="gallery-caption">
+              <h3>Youth Fellowship</h3>
+              <span>Recent Gathering</span>
+            </div>
+          </a>
+
+          <!-- ----- GALLERY CARD 3 ----- -->
+          <a class="gallery-card" href="https://photos.google.com" target="_blank" rel="noopener">
+            <div class="gallery-caption">
+              <h3>Men's Hangout</h3>
+              <span>June 2026 • Throwback</span>
+            </div>
+          </a>
+
+          <!-- ----- GALLERY CARD 4 ----- -->
+          <a class="gallery-card" href="https://photos.google.com" target="_blank" rel="noopener">
+            <div class="gallery-caption">
+              <h3>Church Events</h3>
+              <span>Highlights &amp; Throwbacks</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         ANNOUNCEMENTS  (weekly bulletin board + service schedule)
+         -----------------------------------------------------------------------
+         HOW TO POST A NEW ANNOUNCEMENT:
+           Copy one whole "<article class='bulletin-card'>...</article>" block,
+           paste it at the top of the list, then change the date, title and text.
+         ======================================================================= -->
+    <section class="section" id="announcements">
+      <div class="container">
+        <h2 class="section-title">Weekly Announcements</h2>
+        <p class="section-subtitle">Stay up to date with what's happening at CLA Bumbogo.</p>
+
+        <div class="bulletin-grid">
+
+          <!-- ----- ANNOUNCEMENT 1 ----- -->
+          <article class="bulletin-card">
+            <!-- EDIT: date, title and message -->
+            <p class="date">This Sunday</p>
+            <h3>Combined Worship Service</h3>
+            <p>Join us at 9:00 AM for a special time of praise and the Word.
+               Bring a friend!</p>
+          </article>
+
+          <!-- ----- ANNOUNCEMENT 2 ----- -->
+          <article class="bulletin-card">
+            <p class="date">Sat • 06 June</p>
+            <h3>Men's Hangout</h3>
+            <p>Bible trivia, games, track running and more at Kimihurura Roundabout
+               Park, starting 8:00 AM. Enquiries: +250 792 690 449.</p>
+          </article>
+
+          <!-- ----- ANNOUNCEMENT 3 ----- -->
+          <article class="bulletin-card">
+            <p class="date">Every Wednesday</p>
+            <h3>Midweek Fellowship</h3>
+            <p>An evening of prayer and study at 6:00 PM. All are welcome.</p>
+          </article>
+
+        </div>
+
+        <!-- Weekly schedule strip. EDIT: the time (in <strong>) and label (in <span>). -->
+        <div class="schedule">
+          <div class="schedule-item"><strong>9:00 AM</strong><span>Sunday Worship</span></div>
+          <div class="schedule-item"><strong>11:00 AM</strong><span>Sunday School</span></div>
+          <div class="schedule-item"><strong>6:00 PM</strong><span>Wed Fellowship</span></div>
+          <div class="schedule-item"><strong>5:00 PM</strong><span>Fri Youth Night</span></div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       FOOTER  (always links back to CLA Headquarters — clarwanda.org)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div>
+          <h4>Christian Life Assembly — Bumbogo</h4>
+          <!-- EDIT: footer blurb -->
+          <p>A Christ-centered community in Bumbogo, Kigali. Part of the wider
+             Christian Life Assembly family in Rwanda.</p>
+          <!-- This button MUST always link back to the HQ site for consistency. -->
+          <a class="hq-link" href="https://clarwanda.org" target="_blank" rel="noopener">
+            Visit CLA Headquarters &rarr; clarwanda.org
+          </a>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#sermons">Watch Sermons</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#announcements">Announcements</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <!-- EDIT: contact details -->
+            <li>Bumbogo, Kigali</li>
+            <li><a href="tel:+250792690449">+250 792 690 449</a></li>
+            <li><a href="https://clarwanda.org" target="_blank" rel="noopener">clarwanda.org</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <!-- EDIT: update the year if needed -->
+        <p>&copy; 2026 Christian Life Assembly — Bumbogo Branch. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       Tiny script: opens/closes the mobile menu. (The only JavaScript on the
+       site.) Media team does NOT need to touch this.
+       ========================================================================= -->
+  <script>
+    (function () {
+      var toggle = document.getElementById('navToggle');
+      var menu = document.getElementById('navMenu');
+      if (!toggle || !menu) return;
+
+      toggle.addEventListener('click', function () {
+        var isOpen = menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      // Close the menu after a link is tapped (nicer on phones).
+      menu.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          menu.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
