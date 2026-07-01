@@ -323,6 +323,10 @@ img { max-width: 100%; display: block; }
   gap: 16px;
 }
 .about-card li:last-child { border-bottom: none; }
+.about-card .about-directions {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
 
 /* -----------------------------------------------------------------------------
    6. WATCH SERMONS  (responsive iframe grid — YouTube / Spotify embeds)
